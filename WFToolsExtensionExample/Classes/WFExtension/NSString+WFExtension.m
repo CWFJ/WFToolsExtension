@@ -1,14 +1,14 @@
 //
-//  NSString+WFPath.m
-//  拼接路径
+//  NSString+WFExtension
+//  字符串扩展
 //
 //  Created by 开发者 on 14/12/21.
 //  Copyright (c) 2014年 Jason. All rights reserved.
 //
 
-#import "NSString+WFPath.h"
+#import "NSString+WFExtension.h"
 
-@implementation NSString (WFPath)
+@implementation NSString (WFExtension)
 
 #pragma mark ------<拼接Tmp文件夹路径>
 /**
@@ -47,5 +47,37 @@
 {
     NSString *dir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     return [dir stringByAppendingPathComponent:self.lastPathComponent];
+}
+
+#pragma mark ------<十六进制字符串>
+/**
+ *  字符串十六进制值
+ *
+ *  @return 数值
+ *  @note   例：@"1F" = 31 @"AB" = 171
+ */
+- (NSUInteger)hexValue {
+    NSUInteger i = 0;
+    const char *str = [self UTF8String];
+    
+    NSUInteger returnValue = 0;
+    while (i++ < self.length) {
+        char currChar = str[i - 1];
+        char type = '0';
+        if((currChar >= '0' && currChar <= '9' && (type = '0')) || \
+           (currChar >= 'A' && currChar <= 'Z' && (type = ('A' - 10))) || \
+           (currChar >= 'a' && currChar <= 'z' && (type = ('a' - 10))))
+        {
+            returnValue *= 16;
+            returnValue += currChar - type;
+        }
+        else
+        {
+            returnValue = -1;
+            break;
+        }
+    }
+    
+    return returnValue;
 }
 @end

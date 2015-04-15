@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */; };
 		DCAC71761ADA36AB00B18E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71741ADA36AB00B18E9C /* Main.storyboard */; };
 		DCAC71781ADA36AB00B18E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71771ADA36AB00B18E9C /* Images.xcassets */; };
 		DCAC717B1ADA36AB00B18E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71791ADA36AB00B18E9C /* LaunchScreen.xib */; };
@@ -14,7 +15,7 @@
 		DCAC71991ADA36ED00B18E9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71931ADA36ED00B18E9C /* ViewController.m */; };
 		DCAC719A1ADA36ED00B18E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71961ADA36ED00B18E9C /* AppDelegate.m */; };
 		DCAC719B1ADA36ED00B18E9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71971ADA36ED00B18E9C /* main.m */; };
-		DCAC71AB1ADA371400B18E9C /* NSString+WFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71A01ADA371400B18E9C /* NSString+WFPath.m */; };
+		DCAC71AB1ADA371400B18E9C /* NSString+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71A01ADA371400B18E9C /* NSString+WFExtension.m */; };
 		DCAC71B21ADA374300B18E9C /* WFExtension(Log).m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71B11ADA374300B18E9C /* WFExtension(Log).m */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC9146641ADE3E2B00EAC0D4 /* UIColor+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WFExtension.h"; sourceTree = "<group>"; };
+		DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WFExtension.m"; sourceTree = "<group>"; };
 		DCAC71671ADA36AB00B18E9C /* WFToolsExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFToolsExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAC716B1ADA36AB00B18E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCAC71751ADA36AB00B18E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,8 +45,8 @@
 		DCAC71951ADA36ED00B18E9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DCAC71961ADA36ED00B18E9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DCAC71971ADA36ED00B18E9C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DCAC719F1ADA371400B18E9C /* NSString+WFPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WFPath.h"; sourceTree = "<group>"; };
-		DCAC71A01ADA371400B18E9C /* NSString+WFPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WFPath.m"; sourceTree = "<group>"; };
+		DCAC719F1ADA371400B18E9C /* NSString+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WFExtension.h"; sourceTree = "<group>"; };
+		DCAC71A01ADA371400B18E9C /* NSString+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WFExtension.m"; sourceTree = "<group>"; };
 		DCAC71B01ADA374300B18E9C /* WFExtension(Log).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WFExtension(Log).h"; sourceTree = "<group>"; };
 		DCAC71B11ADA374300B18E9C /* WFExtension(Log).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WFExtension(Log).m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,8 +166,10 @@
 			children = (
 				DCAC71B01ADA374300B18E9C /* WFExtension(Log).h */,
 				DCAC71B11ADA374300B18E9C /* WFExtension(Log).m */,
-				DCAC719F1ADA371400B18E9C /* NSString+WFPath.h */,
-				DCAC71A01ADA371400B18E9C /* NSString+WFPath.m */,
+				DCAC719F1ADA371400B18E9C /* NSString+WFExtension.h */,
+				DCAC71A01ADA371400B18E9C /* NSString+WFExtension.m */,
+				DC9146641ADE3E2B00EAC0D4 /* UIColor+WFExtension.h */,
+				DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */,
 			);
 			path = WFExtension;
 			sourceTree = "<group>";
@@ -273,7 +278,8 @@
 				DCAC719B1ADA36ED00B18E9C /* main.m in Sources */,
 				DCAC71991ADA36ED00B18E9C /* ViewController.m in Sources */,
 				DCAC71B21ADA374300B18E9C /* WFExtension(Log).m in Sources */,
-				DCAC71AB1ADA371400B18E9C /* NSString+WFPath.m in Sources */,
+				DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */,
+				DCAC71AB1ADA371400B18E9C /* NSString+WFExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +474,7 @@
 				DCAC718C1ADA36AB00B18E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCAC718D1ADA36AB00B18E9C /* Build configuration list for PBXNativeTarget "WFToolsExtensionExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +483,7 @@
 				DCAC718F1ADA36AB00B18E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

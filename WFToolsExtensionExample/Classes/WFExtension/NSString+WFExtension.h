@@ -1,6 +1,6 @@
 //
-//  NSString+WFPath.h
-//  拼接路径
+//  NSString+WFExtension
+//  字符串扩展
 //
 //  Created by 开发者 on 14/12/21.
 //  Copyright (c) 2014年 Jason. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (WFPath)
+@interface NSString (WFExtension)
 
 /**
  *  拼接路径到Document文件夹
@@ -33,5 +33,13 @@
  *  @note   例：test.m ----> ...Tmp/test.m
  */
 - (NSString *)appendTmpDir;
+
+/**
+ *  字符串十六进制值
+ *
+ *  @return 数值
+ *  @note   例：@"1F" = 31 @"AB" = 171 
+ */
+- (NSUInteger)hexValue;
 
 @end
