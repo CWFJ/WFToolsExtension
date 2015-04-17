@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (WFExtension)
 
@@ -41,5 +42,15 @@
  *  @note   例：@"1F" = 31 @"AB" = 171 
  */
 - (NSUInteger)hexValue;
+
+/**
+ *  获取NSString所占用的Size大小
+ *
+ *  @param fontSize 字体大小
+ *  @param maxSize  最大Size
+ *
+ *  @return 占用的Size大小
+ */
+- (CGSize)labelAutoCalculateRectWithFontSize:(CGFloat)fontSize MaxSize:(CGSize)maxSize;
 
 @end

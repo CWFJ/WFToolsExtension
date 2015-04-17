@@ -80,4 +80,25 @@
     
     return returnValue;
 }
+
+#pragma mark ------<获取NSString所占用的Size大小>
+/**
+ *  获取NSString所占用的Size大小
+ *
+ *  @param fontSize 字体大小
+ *  @param maxSize  最大Size
+ *
+ *  @return 占用的Size大小
+ */
+- (CGSize)labelAutoCalculateRectWithFontSize:(CGFloat)fontSize MaxSize:(CGSize)maxSize {
+    NSMutableParagraphStyle *paragraghStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraghStyle setLineSpacing:2];//调整行间距
+    paragraghStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *attr = @{NSFontAttributeName : [UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:paragraghStyle.copy};
+    CGSize labelSize = [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine attributes:attr context:nil].size;
+    labelSize.height = ceil(labelSize.height);
+    labelSize.width = ceil(labelSize.width);
+    
+    return labelSize;
+}
 @end
