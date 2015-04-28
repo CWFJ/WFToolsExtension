@@ -47,10 +47,10 @@
  *  获取NSString所占用的Size大小
  *
  *  @param fontSize 字体大小
- *  @param maxSize  最大Size
+ *  @param maxWidth 最大宽度
  *
  *  @return 占用的Size大小
  */
-- (CGSize)labelAutoCalculateRectWithFontSize:(CGFloat)fontSize MaxSize:(CGSize)maxSize;
+- (CGSize)labelAutoCalculateRectWithFontSize:(CGFloat)fontSize maxWidth:(CGFloat)maxWidth;
 
 @end
