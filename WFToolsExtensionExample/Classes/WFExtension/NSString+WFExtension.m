@@ -86,16 +86,22 @@
  *  获取NSString所占用的Size大小
  *
  *  @param fontSize 字体大小
- *  @param maxSize  最大Size
+ *  @param maxWidth 最大宽度
  *
  *  @return 占用的Size大小
  */
-- (CGSize)labelAutoCalculateRectWithFontSize:(CGFloat)fontSize MaxSize:(CGSize)maxSize {
+- (CGSize)labelAutoCalculateRectWithFontSize:(CGFloat)fontSize maxWidth:(CGFloat)maxWidth {
     NSMutableParagraphStyle *paragraghStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraghStyle setLineSpacing:2];//调整行间距
+    /** 设置行间距 */
+    [paragraghStyle setLineSpacing:2];
     paragraghStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    /** 设置字体 */
     NSDictionary *attr = @{NSFontAttributeName : [UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:paragraghStyle.copy};
+    /** 最大大小 */
+    CGSize maxSize = CGSizeMake(maxWidth, MAXFLOAT);
+    /** 计算占用大小 */
     CGSize labelSize = [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine attributes:attr context:nil].size;
+    /** 向上取整 */
     labelSize.height = ceil(labelSize.height);
     labelSize.width = ceil(labelSize.width);
     

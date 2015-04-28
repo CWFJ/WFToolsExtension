@@ -17,6 +17,8 @@
 		DCAC719B1ADA36ED00B18E9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71971ADA36ED00B18E9C /* main.m */; };
 		DCAC71AB1ADA371400B18E9C /* NSString+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71A01ADA371400B18E9C /* NSString+WFExtension.m */; };
 		DCAC71B21ADA374300B18E9C /* WFExtension(Log).m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71B11ADA374300B18E9C /* WFExtension(Log).m */; };
+		DCDF64801AEF63320074D314 /* CGSize+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF647F1AEF63320074D314 /* CGSize+WFExtension.m */; };
+		DCDF64831AEF644A0074D314 /* UIView+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF64821AEF644A0074D314 /* UIView+WFExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		DCAC71A01ADA371400B18E9C /* NSString+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WFExtension.m"; sourceTree = "<group>"; };
 		DCAC71B01ADA374300B18E9C /* WFExtension(Log).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WFExtension(Log).h"; sourceTree = "<group>"; };
 		DCAC71B11ADA374300B18E9C /* WFExtension(Log).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WFExtension(Log).m"; sourceTree = "<group>"; };
+		DCDF647E1AEF63320074D314 /* CGSize+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGSize+WFExtension.h"; sourceTree = "<group>"; };
+		DCDF647F1AEF63320074D314 /* CGSize+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGSize+WFExtension.m"; sourceTree = "<group>"; };
+		DCDF64811AEF644A0074D314 /* UIView+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WFExtension.h"; sourceTree = "<group>"; };
+		DCDF64821AEF644A0074D314 /* UIView+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WFExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,10 @@
 				DCAC71A01ADA371400B18E9C /* NSString+WFExtension.m */,
 				DC9146641ADE3E2B00EAC0D4 /* UIColor+WFExtension.h */,
 				DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */,
+				DCDF64811AEF644A0074D314 /* UIView+WFExtension.h */,
+				DCDF64821AEF644A0074D314 /* UIView+WFExtension.m */,
+				DCDF647E1AEF63320074D314 /* CGSize+WFExtension.h */,
+				DCDF647F1AEF63320074D314 /* CGSize+WFExtension.m */,
 			);
 			path = WFExtension;
 			sourceTree = "<group>";
@@ -278,6 +288,8 @@
 				DCAC719B1ADA36ED00B18E9C /* main.m in Sources */,
 				DCAC71991ADA36ED00B18E9C /* ViewController.m in Sources */,
 				DCAC71B21ADA374300B18E9C /* WFExtension(Log).m in Sources */,
+				DCDF64801AEF63320074D314 /* CGSize+WFExtension.m in Sources */,
+				DCDF64831AEF644A0074D314 /* UIView+WFExtension.m in Sources */,
 				DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */,
 				DCAC71AB1ADA371400B18E9C /* NSString+WFExtension.m in Sources */,
 			);
