@@ -19,6 +19,7 @@
 		DCAC71B21ADA374300B18E9C /* WFExtension(Log).m in Sources */ = {isa = PBXBuildFile; fileRef = DCAC71B11ADA374300B18E9C /* WFExtension(Log).m */; };
 		DCDF64801AEF63320074D314 /* CGSize+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF647F1AEF63320074D314 /* CGSize+WFExtension.m */; };
 		DCDF64831AEF644A0074D314 /* UIView+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF64821AEF644A0074D314 /* UIView+WFExtension.m */; };
+		DCDF64861AEF69440074D314 /* UIImage+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF64851AEF69440074D314 /* UIImage+WFExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		DCDF647F1AEF63320074D314 /* CGSize+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGSize+WFExtension.m"; sourceTree = "<group>"; };
 		DCDF64811AEF644A0074D314 /* UIView+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WFExtension.h"; sourceTree = "<group>"; };
 		DCDF64821AEF644A0074D314 /* UIView+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WFExtension.m"; sourceTree = "<group>"; };
+		DCDF64841AEF69440074D314 /* UIImage+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WFExtension.h"; sourceTree = "<group>"; };
+		DCDF64851AEF69440074D314 /* UIImage+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WFExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				DCDF64821AEF644A0074D314 /* UIView+WFExtension.m */,
 				DCDF647E1AEF63320074D314 /* CGSize+WFExtension.h */,
 				DCDF647F1AEF63320074D314 /* CGSize+WFExtension.m */,
+				DCDF64841AEF69440074D314 /* UIImage+WFExtension.h */,
+				DCDF64851AEF69440074D314 /* UIImage+WFExtension.m */,
 			);
 			path = WFExtension;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDF64861AEF69440074D314 /* UIImage+WFExtension.m in Sources */,
 				DCAC719A1ADA36ED00B18E9C /* AppDelegate.m in Sources */,
 				DCAC719B1ADA36ED00B18E9C /* main.m in Sources */,
 				DCAC71991ADA36ED00B18E9C /* ViewController.m in Sources */,
