@@ -107,4 +107,29 @@
     
     return labelSize;
 }
+
+#pragma mark ------<判断字符串是否为空>
+/**
+ *  判断字符串是否为空
+ *
+ *  @return 结果
+ */
++ (BOOL)isNil:(NSString *)str {
+    return (str.length == 0);
+}
+
+#pragma mark ------<判断是否为电话>
+/**
+ *  判断是否为电话
+ *
+ *  @return 是否为电话
+ */
+- (BOOL)isTelString {
+    if (self.length == 0) {
+        return NO;
+    }
+    NSString *regex = @"^[1][3,4,5,7,8][0-9]{9}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [pred evaluateWithObject:self];
+}
 @end

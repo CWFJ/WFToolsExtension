@@ -10,6 +10,7 @@
 
 @interface UIImage (WFExtension)
 
+#pragma mark ------<改变图片颜色>
 /**
  *  改变图片颜色
  *
@@ -19,6 +20,7 @@
  */
 - (UIImage *)imageWithColor:(UIColor *)color;
 
+#pragma mark ------<高斯模糊图片>
 /**
  *  高斯模糊图片
  *
@@ -28,6 +30,7 @@
  */
 - (UIImage *)blurryImageWithRadius:(CGFloat)radius;
 
+#pragma mark ------<将图片放大/缩小到Size大小>
 /**
  *  将图片放大/缩小到Size大小
  *

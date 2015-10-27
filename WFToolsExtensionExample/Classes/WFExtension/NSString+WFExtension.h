@@ -11,6 +11,7 @@
 
 @interface NSString (WFExtension)
 
+#pragma mark ------<拼接路径到Document文件夹>
 /**
  *  拼接路径到Document文件夹
  *
@@ -19,6 +20,7 @@
  */
 - (NSString *)appendDocumentDir;
 
+#pragma mark ------<拼接路径到Cache文件夹>
 /**
  *  拼接路径到Cache文件夹
  *
@@ -27,6 +29,7 @@
  */
 - (NSString *)appendCacheDir;
 
+#pragma mark ------<拼接路径到Tmp文件夹>
 /**
  *  拼接路径到Tmp文件夹
  *
@@ -35,6 +38,7 @@
  */
 - (NSString *)appendTmpDir;
 
+#pragma mark ------<获取字符串十六进制值>
 /**
  *  字符串十六进制值
  *
@@ -43,6 +47,7 @@
  */
 - (NSUInteger)hexValue;
 
+#pragma mark ------<获取NSString所占用的Size大小>
 /**
  *  获取NSString所占用的Size大小
  *
@@ -53,4 +58,19 @@
  */
 - (CGSize)labelAutoCalculateRectWithFontSize:(CGFloat)fontSize maxWidth:(CGFloat)maxWidth;
 
+#pragma mark ------<判断字符串是否为空>
+/**
+ *  判断字符串是否为空
+ *
+ *  @return 结果
+ */
++ (BOOL)isNil:(NSString *)str;
+
+#pragma mark ------<判断是否为电话>
+/**
+ *  判断是否为电话
+ *
+ *  @return 是否为电话
+ */
+- (BOOL)isTelString;
 @end
