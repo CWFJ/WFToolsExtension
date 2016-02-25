@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC767D7E1BDF21CA002DF1BC /* NSDate+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */; settings = {ASSET_TAGS = (); }; };
+		DC767D7E1BDF21CA002DF1BC /* NSDate+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */; };
 		DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */; };
 		DCAC71761ADA36AB00B18E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71741ADA36AB00B18E9C /* Main.storyboard */; };
 		DCAC71781ADA36AB00B18E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71771ADA36AB00B18E9C /* Images.xcassets */; };
@@ -36,6 +36,7 @@
 /* Begin PBXFileReference section */
 		DC767D7C1BDF21CA002DF1BC /* NSDate+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WFExtension.h"; sourceTree = "<group>"; };
 		DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WFExtension.m"; sourceTree = "<group>"; };
+		DC8772561C7EE49C00D6A5FA /* WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFExtension.h; sourceTree = "<group>"; };
 		DC9146641ADE3E2B00EAC0D4 /* UIColor+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WFExtension.h"; sourceTree = "<group>"; };
 		DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WFExtension.m"; sourceTree = "<group>"; };
 		DCAC71671ADA36AB00B18E9C /* WFToolsExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFToolsExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +177,7 @@
 		DCAC719C1ADA371400B18E9C /* WFExtension */ = {
 			isa = PBXGroup;
 			children = (
+				DC8772561C7EE49C00D6A5FA /* WFExtension.h */,
 				DCAC71B01ADA374300B18E9C /* WFExtension(Log).h */,
 				DCAC71B11ADA374300B18E9C /* WFExtension(Log).m */,
 				DCAC719F1ADA371400B18E9C /* NSString+WFExtension.h */,
