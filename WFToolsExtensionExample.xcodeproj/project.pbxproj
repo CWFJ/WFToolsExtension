@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC767D7E1BDF21CA002DF1BC /* NSDate+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */; settings = {ASSET_TAGS = (); }; };
 		DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */; };
 		DCAC71761ADA36AB00B18E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71741ADA36AB00B18E9C /* Main.storyboard */; };
 		DCAC71781ADA36AB00B18E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71771ADA36AB00B18E9C /* Images.xcassets */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC767D7C1BDF21CA002DF1BC /* NSDate+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WFExtension.h"; sourceTree = "<group>"; };
+		DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WFExtension.m"; sourceTree = "<group>"; };
 		DC9146641ADE3E2B00EAC0D4 /* UIColor+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WFExtension.h"; sourceTree = "<group>"; };
 		DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WFExtension.m"; sourceTree = "<group>"; };
 		DCAC71671ADA36AB00B18E9C /* WFToolsExtensionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFToolsExtensionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +188,8 @@
 				DCDF647F1AEF63320074D314 /* CGSize+WFExtension.m */,
 				DCDF64841AEF69440074D314 /* UIImage+WFExtension.h */,
 				DCDF64851AEF69440074D314 /* UIImage+WFExtension.m */,
+				DC767D7C1BDF21CA002DF1BC /* NSDate+WFExtension.h */,
+				DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */,
 			);
 			path = WFExtension;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				DCDF64831AEF644A0074D314 /* UIView+WFExtension.m in Sources */,
 				DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */,
 				DCAC71AB1ADA371400B18E9C /* NSString+WFExtension.m in Sources */,
+				DC767D7E1BDF21CA002DF1BC /* NSDate+WFExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

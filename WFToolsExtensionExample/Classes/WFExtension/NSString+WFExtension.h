@@ -38,6 +38,22 @@
  */
 - (NSString *)appendTmpDir;
 
+#pragma mark ------<将绝对地址转化为相对地址>
+/**
+ *  将绝对地址转化为相对地址
+ *
+ *  @return 相对地址
+ */
+- (NSString *) absolutePath2RelativePath;
+
+#pragma mark ------<将相对地址转化为绝对地址>
+/**
+ *  将相对地址转化为绝对地址
+ *
+ *  @return 相对地址
+ */
+- (NSString *) relativePath2AbsolutePath;
+
 #pragma mark ------<获取字符串十六进制值>
 /**
  *  字符串十六进制值
@@ -73,4 +89,12 @@
  *  @return 是否为电话
  */
 - (BOOL)isTelString;
+
+#pragma mark ------<判断是否为邮箱>
+/**
+ *  判断是否为邮箱
+ *
+ *  @return 是否为邮箱
+ */
+-(BOOL)isValidateEmail;
 @end

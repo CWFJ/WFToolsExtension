@@ -49,6 +49,30 @@
     return [dir stringByAppendingPathComponent:self.lastPathComponent];
 }
 
+#pragma mark ------<将绝对地址转化为相对地址>
+/**
+ *  将绝对地址转化为相对地址
+ *
+ *  @return 相对地址
+ */
+- (NSString *) absolutePath2RelativePath {
+    NSString *bundlePath = NSHomeDirectory();
+    NSMutableString *rtnString = [NSMutableString stringWithString:self];
+    [rtnString deleteCharactersInRange:[rtnString rangeOfString:bundlePath]];
+    return rtnString;
+}
+
+#pragma mark ------<将相对地址转化为绝对地址>
+/**
+ *  将相对地址转化为绝对地址
+ *
+ *  @return 相对地址
+ */
+- (NSString *) relativePath2AbsolutePath {
+    NSString *bundlePath = NSHomeDirectory();
+    return [bundlePath stringByAppendingString:self];
+}
+
 #pragma mark ------<十六进制字符串>
 /**
  *  字符串十六进制值
@@ -131,5 +155,21 @@
     NSString *regex = @"^[1][3,4,5,7,8][0-9]{9}$";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [pred evaluateWithObject:self];
+}
+
+#pragma mark ------<判断是否为邮箱>
+/**
+ *  判断是否为邮箱
+ *
+ *  @return 是否为邮箱
+ */
+-(BOOL)isValidateEmail {
+    
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
+    
+    return [emailTest evaluateWithObject:self];
+    
 }
 @end
