@@ -15,8 +15,8 @@
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        id obj = [[self alloc] init];
-        [obj swizzleMethod:@selector(objectAtIndex:) withMethod:@selector(safeObjectAtIndex:)];
+        id obj2 = NSClassFromString(@"__NSArrayI");
+        [obj2 swizzleMethod:@selector(objectAtIndex:) withMethod:@selector(safeObjectAtIndex:)];
     });
 }
 
