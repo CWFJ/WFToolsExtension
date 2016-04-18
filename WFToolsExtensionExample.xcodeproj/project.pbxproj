@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC5745EC1CC475680049FE54 /* NSArray+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5745EB1CC475680049FE54 /* NSArray+WFExtension.m */; };
 		DC767D7E1BDF21CA002DF1BC /* NSDate+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */; };
+		DC83C8A41CC48555001D4A71 /* NSObject+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC83C8A31CC48555001D4A71 /* NSObject+WFExtension.m */; };
+		DC83C8A71CC4860C001D4A71 /* NSMutableArray+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC83C8A61CC4860C001D4A71 /* NSMutableArray+WFExtension.m */; };
 		DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */; };
 		DCAC71761ADA36AB00B18E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71741ADA36AB00B18E9C /* Main.storyboard */; };
 		DCAC71781ADA36AB00B18E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAC71771ADA36AB00B18E9C /* Images.xcassets */; };
@@ -34,8 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC5745EA1CC475680049FE54 /* NSArray+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WFExtension.h"; sourceTree = "<group>"; };
+		DC5745EB1CC475680049FE54 /* NSArray+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WFExtension.m"; sourceTree = "<group>"; };
 		DC767D7C1BDF21CA002DF1BC /* NSDate+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WFExtension.h"; sourceTree = "<group>"; };
 		DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WFExtension.m"; sourceTree = "<group>"; };
+		DC83C8A21CC48555001D4A71 /* NSObject+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WFExtension.h"; sourceTree = "<group>"; };
+		DC83C8A31CC48555001D4A71 /* NSObject+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WFExtension.m"; sourceTree = "<group>"; };
+		DC83C8A51CC4860C001D4A71 /* NSMutableArray+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WFExtension.h"; sourceTree = "<group>"; };
+		DC83C8A61CC4860C001D4A71 /* NSMutableArray+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WFExtension.m"; sourceTree = "<group>"; };
 		DC8772561C7EE49C00D6A5FA /* WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFExtension.h; sourceTree = "<group>"; };
 		DC9146641ADE3E2B00EAC0D4 /* UIColor+WFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WFExtension.h"; sourceTree = "<group>"; };
 		DC9146651ADE3E2B00EAC0D4 /* UIColor+WFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WFExtension.m"; sourceTree = "<group>"; };
@@ -192,6 +201,12 @@
 				DCDF64851AEF69440074D314 /* UIImage+WFExtension.m */,
 				DC767D7C1BDF21CA002DF1BC /* NSDate+WFExtension.h */,
 				DC767D7D1BDF21CA002DF1BC /* NSDate+WFExtension.m */,
+				DC5745EA1CC475680049FE54 /* NSArray+WFExtension.h */,
+				DC5745EB1CC475680049FE54 /* NSArray+WFExtension.m */,
+				DC83C8A21CC48555001D4A71 /* NSObject+WFExtension.h */,
+				DC83C8A31CC48555001D4A71 /* NSObject+WFExtension.m */,
+				DC83C8A51CC4860C001D4A71 /* NSMutableArray+WFExtension.h */,
+				DC83C8A61CC4860C001D4A71 /* NSMutableArray+WFExtension.m */,
 			);
 			path = WFExtension;
 			sourceTree = "<group>";
@@ -299,9 +314,12 @@
 				DCDF64861AEF69440074D314 /* UIImage+WFExtension.m in Sources */,
 				DCAC719A1ADA36ED00B18E9C /* AppDelegate.m in Sources */,
 				DCAC719B1ADA36ED00B18E9C /* main.m in Sources */,
+				DC83C8A71CC4860C001D4A71 /* NSMutableArray+WFExtension.m in Sources */,
 				DCAC71991ADA36ED00B18E9C /* ViewController.m in Sources */,
+				DC5745EC1CC475680049FE54 /* NSArray+WFExtension.m in Sources */,
 				DCAC71B21ADA374300B18E9C /* WFExtension(Log).m in Sources */,
 				DCDF64801AEF63320074D314 /* CGSize+WFExtension.m in Sources */,
+				DC83C8A41CC48555001D4A71 /* NSObject+WFExtension.m in Sources */,
 				DCDF64831AEF644A0074D314 /* UIView+WFExtension.m in Sources */,
 				DC9146671ADE3E2B00EAC0D4 /* UIColor+WFExtension.m in Sources */,
 				DCAC71AB1ADA371400B18E9C /* NSString+WFExtension.m in Sources */,

@@ -18,5 +18,6 @@
 @property (nonatomic, assign) CGFloat centerY;
 @property (nonatomic, assign) CGSize  size;
 @property (nonatomic, assign) CGPoint origin;
+- (UIViewController*)viewController;
 
 @end
