@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WFToolsExtension"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "丰富的系统扩展库"
   s.homepage     = "https://github.com/CWFJ/WFToolsExtension"
   s.license      = "MIT"
