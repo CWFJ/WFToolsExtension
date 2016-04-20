@@ -54,4 +54,14 @@
  *  返回的imageOrientaion为0。
  */
 - (UIImage *)fixOrientationImage;
+
+#pragma mark ------<获取网络图片大小>
+/**
+ *  获取网络图片大小
+ *
+ *  @param url           图片URL
+ *  @param completeBlock 获取后的回调
+ */
++ (void)GetImageSizeWithUrl:(NSString *)url
+                   complete:(void (^)(CGSize size))completeBlock;
 @end
