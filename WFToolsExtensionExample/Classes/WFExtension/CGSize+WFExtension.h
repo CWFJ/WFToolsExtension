@@ -19,6 +19,18 @@
  *  @return 最合适的大小
  *  @note   类似与image填充的Aspect Fill类型
  */
-CGSize CGScaleSizetoFit(CGSize srcSize, CGSize dstSize);
+CGSize CGZoomSizetoFit(CGSize srcSize, CGSize dstSize);
+
+#pragma mark ------<将原始的CGSize等比例缩放到 与目标CGSize 最合适的大小>
+/**
+ *  将原始的CGSize等比例缩放到 与目标CGSize 最合适的大小
+ *
+ *  @param srcSize 原始尺寸
+ *  @param minSize 最小尺寸
+ *  @param maxSize 最大尺寸
+ *
+ *  @return 最合适的大小
+ */
+CGSize CGScaleSizetoFit(CGSize srcSize, CGSize minSize, CGSize maxSize);
 
 #endif
