@@ -20,4 +20,37 @@
 @property (nonatomic, assign) CGPoint origin;
 - (UIViewController*)viewController;
 
+#pragma mark ------<查找特定类型的subview>
+/**
+ *  查找特定类型的subview
+ *
+ *  @param className 查找的类名
+ *
+ *  @return 查找结果
+ *  @note   广度优先遍历
+ */
+- (UIView *)findSubviewWithClassNameBFS:(NSString *)className;
+
+#pragma mark ------<查找特定类型的subview - 深度度优先遍历>
+/**
+ *  查找特定类型的subview
+ *
+ *  @param className 查找的类名
+ *
+ *  @return 查找结果
+ *  @note   深度度优先遍历
+ */
+- (UIView *)findSubviewWithClassNameDFS:(NSString *)className;
+
+#pragma mark ------<查找特定类型的Subviews>
+/**
+ *  查找特定类型的Subviews
+ *
+ *  @param className 查找的类名
+ *
+ *  @return 查找结果
+ *  @note   深度度优先遍历
+ */
+- (NSArray *)findSubviewsWithClassNameDFS:(NSString *)className;
+
 @end

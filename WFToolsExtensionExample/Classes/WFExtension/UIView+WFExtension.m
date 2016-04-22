@@ -117,4 +117,94 @@
     }
     return nil;
 }
+//dfs
+#pragma mark ------<查找特定类型的subview - 广度优先遍历>
+/**
+ *  查找特定类型的subview
+ *
+ *  @param className 查找的类名
+ *
+ *  @return 查找结果
+ *  @note   广度优先遍历
+ */
+- (UIView *)findSubviewWithClassNameBFS:(NSString *)className {
+    
+    if(self.subviews.count == 0) return nil;
+    
+    __block UIView *resultView = nil;
+    /** 查找自身Subview*/
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([[obj class] isSubclassOfClass:NSClassFromString(className)]) {
+            resultView = obj;
+            *stop = YES;
+        }
+    }];
+    
+    if(!resultView) {
+        /** 在自身subview中没有找到，就再下一级的subview中去寻找 */
+        [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            resultView = [obj findSubviewWithClassNameBFS:className];
+            if(resultView) {
+                *stop = YES;
+            }
+        }];
+    }
+    
+    return resultView;
+}
+
+#pragma mark ------<查找特定类型的subview - 深度度优先遍历>
+/**
+ *  查找特定类型的subview
+ *
+ *  @param className 查找的类名
+ *
+ *  @return 查找结果
+ *  @note   深度度优先遍历
+ */
+- (UIView *)findSubviewWithClassNameDFS:(NSString *)className {
+    
+    if(self.subviews.count == 0) return nil;
+    
+    __block UIView *resultView = nil;
+    /** 查找自身Subview*/
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([[obj class] isSubclassOfClass:NSClassFromString(className)]) {
+            resultView = obj;
+            *stop = YES;
+        }
+        else {
+            resultView = [obj findSubviewWithClassNameDFS:className];
+            if(resultView) {
+                *stop = YES;
+            }
+        }
+    }];
+    return resultView;
+}
+
+#pragma mark ------<查找特定类型的Subviews>
+/**
+ *  查找特定类型的Subviews
+ *
+ *  @param className 查找的类名
+ *
+ *  @return 查找结果
+ *  @note   深度度优先遍历,由于是完全遍历，就不在实现其他遍历方法了
+ */
+- (NSArray *)findSubviewsWithClassNameDFS:(NSString *)className {
+    
+    if(self.subviews.count == 0) return [NSMutableArray array];
+    
+    __block NSMutableArray *resultViews = [NSMutableArray array];
+    
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([[obj class] isSubclassOfClass:NSClassFromString(className)]) {
+            [resultViews addObject:obj];
+        }
+        [resultViews addObjectsFromArray:[obj findSubviewsWithClassNameDFS:className]];
+    }];
+    
+    return [resultViews copy];
+}
 @end
