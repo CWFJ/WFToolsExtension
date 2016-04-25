@@ -35,4 +35,22 @@
                      blue:((float)((rgbValue & 0xFF)/255.0)) alpha:1.0];
 }
 
+#pragma mark ------<获取颜色的RGB数值>
+/**
+ *  获取颜色的RGB数值
+ *
+ *  @param complete 完成后的回调
+ */
+- (void)getRGBComponents:(void(^)(CGFloat red, CGFloat green, CGFloat blue))complete {
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char resultingPixel[4];
+    CGContextRef context = CGBitmapContextCreate(&resultingPixel, 1, 1, 8, 4, rgbColorSpace, kCGImageAlphaNoneSkipLast);
+    
+    CGContextSetFillColorWithColor(context, [self CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, 1, 1));
+    CGContextRelease(context);
+    CGColorSpaceRelease(rgbColorSpace);
+
+    complete(resultingPixel[0] / 255.0f, resultingPixel[1] / 255.0f, resultingPixel[2] / 255.0f);
+}
 @end
