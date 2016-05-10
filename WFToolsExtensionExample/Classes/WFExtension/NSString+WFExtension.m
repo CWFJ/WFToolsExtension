@@ -7,6 +7,7 @@
 //
 
 #import "NSString+WFExtension.h"
+#import "NSDate+WFExtension.h"
 
 @implementation NSString (WFExtension)
 
@@ -171,5 +172,105 @@
     
     return [emailTest evaluateWithObject:self];
     
+}
+
+#pragma mark ------<将时间字符串转化为日期>
+/**
+ *  将日期字符串转化为日期
+ *
+ *  @param format 字符串格式
+ *
+ *  @return 日期
+ *  @note   默认时区为en_US
+ */
+- (NSDate *)dateWithFormat:(NSString *)format {
+    return [self dateWithFormat:format local:@"en_US"];
+}
+
+/**
+ *  将一定时区的日期字符串转化为日期
+ *
+ *  @param format           字符串格式
+ *  @param localeIdentifier 时区标识
+ *
+ *  @return 日期
+ */
+- (NSDate *)dateWithFormat:(NSString *)format local:(NSString *)localeIdentifier {
+    NSDate *date = nil;
+    
+    if(!localeIdentifier) localeIdentifier = @"en_US";
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:localeIdentifier];
+    [dateFormatter setDateFormat:format];
+    date = [dateFormatter dateFromString:self];
+    
+    return date;
+}
+
+#pragma mark ------<转化日期字符串格式>
+/**
+ *  转化日期字符串格式
+ *
+ *  @param srcFormat        源格式
+ *  @param dstFormat        目标格式
+ *
+ *  @return 转化后的字符串
+ */
+- dateStringChangeFormatFrom:(NSString *)srcFormat to:(NSString *)dstFormat {
+    return [self dateStringChangeFormatFrom:srcFormat to:dstFormat local:@"en_US"];
+}
+
+#pragma mark ------<转化日期字符串格式>
+/**
+ *  转化日期字符串格式
+ *
+ *  @param srcFormat        源格式
+ *  @param dstFormat        目标格式
+ *  @param localeIdentifier 时区标识
+ *
+ *  @return 转化后的字符串
+ */
+- (NSString *)dateStringChangeFormatFrom:(NSString *)srcFormat to:(NSString *)dstFormat local:(NSString *)localeIdentifier {
+    NSDate *date = [self dateWithFormat:srcFormat local:localeIdentifier];
+    return [date dateStringWithFormat:dstFormat];
+ 
+}
+
+#pragma mark ------<将日期字符串转化为易阅读的字符串>
+/**
+ *  将日期字符串转化为易阅读的字符串
+ *
+ *  @param format           字符串格式
+ *  @param type             转换类型
+ *
+ *  @return 转换后的字符串
+ *  @note   Type:
+ *          0:<xxxx年xx月xx日 xx:xx> <xx月xx日 xx:xx> <昨天 xx:xx> <xx:xx> <xx分钟前> <刚刚>
+ *          1:<xxxx年xx月xx日> <xx月xx日> <xx天前> <xx小时前> <xx分钟前> <刚刚>
+ *          2:<xxxx年xx月xx日> <xx月xx日> <昨天> <xx:xx> <xx分钟前> <刚刚>
+ *          默认时区为en_US
+ */
+- (NSString *)readabilityDateStringWithFormate:(NSString *)format type:(NSInteger)type {
+    return [self readabilityDateStringWithFormate:format local:@"en_US" type:type];
+}
+
+/**
+ *  将一定时区的日期字符串转化为易阅读的字符串
+ *
+ *  @param format           字符串格式
+ *  @param localeIdentifier 时区标识
+ *  @param type             转换类型
+ *
+ *  @return 转换后的字符串
+ *  @note   Type:
+ *          0:<xxxx年xx月xx日 xx:xx> <xx月xx日 xx:xx> <昨天 xx:xx> <xx:xx> <xx分钟前> <刚刚>
+ *          1:<xxxx年xx月xx日> <xx月xx日> <xx天前> <xx小时前> <xx分钟前> <刚刚>
+ *          2:<xxxx年xx月xx日> <xx月xx日> <昨天> <xx:xx> <xx分钟前> <刚刚>
+ */
+- (NSString *)readabilityDateStringWithFormate:(NSString *)format local:(NSString *)localeIdentifier type:(NSInteger)type {
+    NSDate *date = [self dateWithFormat:format local:localeIdentifier];
+    
+    return [date readabilityDateStringWithType:type];;
 }
 @end

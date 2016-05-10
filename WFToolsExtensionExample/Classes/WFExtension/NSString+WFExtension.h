@@ -97,4 +97,84 @@
  *  @return 是否为邮箱
  */
 -(BOOL)isValidateEmail;
+
+
+#define kDataFormat_Tue_Mar_29_00_00_00_CST_2016 @"E MMM dd HH:mm:ss z yyyy"
+
+#pragma mark ------<将时间字符串转化为日期>
+/**
+ *  将时间字符串转化为日期
+ *
+ *  @param format 字符串格式
+ *
+ *  @return 日期
+ *  @note   默认时区为en_US
+ */
+- (NSDate *)dateWithFormat:(NSString *)format;
+
+#pragma mark ------<将一定时区的日期字符串转化为日期>
+/**
+ *  将一定时区的日期字符串转化为日期
+ *
+ *  @param format           字符串格式
+ *  @param localeIdentifier 时区标识
+ *
+ *  @return 日期
+ */
+- (NSDate *)dateWithFormat:(NSString *)format local:(NSString *)localeIdentifier;
+
+#pragma mark ------<将日期字符串转化为易阅读的字符串>
+/**
+ *  将日期字符串转化为易阅读的字符串
+ *
+ *  @param format           字符串格式
+ *  @param type             转换类型
+ *
+ *  @return 转换后的字符串
+ *  @note   Type:
+ *          0:<xxxx年xx月xx日 xx:xx> <xx月xx日 xx:xx> <昨天 xx:xx> <xx:xx> <xx分钟前> <刚刚>
+ *          1:<xxxx年xx月xx日> <xx月xx日> <xx天前> <xx小时前> <xx分钟前> <刚刚>
+ *          2:<xxxx年xx月xx日> <xx月xx日> <昨天> <xx:xx> <xx分钟前> <刚刚>
+ *          默认时区为en_US
+ */
+- (NSString *)readabilityDateStringWithFormate:(NSString *)format type:(NSInteger)type;
+
+#pragma mark ------<将一定时区的日期字符串转化为易阅读的字符串>
+/**
+ *  将一定时区的日期字符串转化为易阅读的字符串
+ *
+ *  @param format           字符串格式
+ *  @param localeIdentifier 时区标识
+ *  @param type             转换类型
+ *
+ *  @return 转换后的字符串
+ *  @note   Type:
+ *          0:<xxxx年xx月xx日 xx:xx> <xx月xx日 xx:xx> <昨天 xx:xx> <xx:xx> <xx分钟前> <刚刚>
+ *          1:<xxxx年xx月xx日> <xx月xx日> <xx天前> <xx小时前> <xx分钟前> <刚刚>
+ *          2:<xxxx年xx月xx日> <xx月xx日> <昨天> <xx:xx> <xx分钟前> <刚刚>
+ */
+- (NSString *)readabilityDateStringWithFormate:(NSString *)format local:(NSString *)localeIdentifier type:(NSInteger)type;
+
+#pragma mark ------<转化日期字符串格式>
+/**
+ *  转化日期字符串格式
+ *
+ *  @param srcFormat        源格式
+ *  @param dstFormat        目标格式
+ *
+ *  @return 转化后的字符串
+ */
+- dateStringChangeFormatFrom:(NSString *)srcFormat to:(NSString *)dstFormat;
+
+#pragma mark ------<转化日期字符串格式>
+/**
+ *  转化日期字符串格式
+ *
+ *  @param srcFormat        源格式
+ *  @param dstFormat        目标格式
+ *  @param localeIdentifier 时区标识
+ *
+ *  @return 转化后的字符串
+ */
+- (NSString *)dateStringChangeFormatFrom:(NSString *)srcFormat to:(NSString *)dstFormat local:(NSString *)localeIdentifier;
 @end
