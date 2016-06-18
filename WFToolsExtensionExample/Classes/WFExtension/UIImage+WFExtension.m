@@ -120,6 +120,41 @@
     return returnImage;
 }
 
+#pragma mark ------<编辑图片>
+/**
+ *  编辑图片
+ *
+ *  @param saturation 饱和度   0---2
+ *  @param brightness 亮度    -1---1
+ *  @param contrast   对比度   0---4
+ *
+ *  @return 更改后的图片
+ */
+- (UIImage *)editImageWithSaturation:(CGFloat)saturation brightness:(CGFloat)brightness contrast:(CGFloat)contrast {
+    
+    CIImage *beginImage = [CIImage imageWithCGImage:self.CGImage];
+    CIFilter * filter = [CIFilter filterWithName:@"CIColorControls"];
+    [filter setValue:beginImage forKey:kCIInputImageKey];
+    //  饱和度      0---2
+    [filter setValue:@(saturation) forKey:@"inputSaturation"];
+    //  亮度  10   -1---1
+    [filter setValue:@(brightness) forKey:@"inputBrightness"];
+    //  对比度 -11  0---4
+    [filter setValue:@(contrast) forKey:@"inputContrast"];
+    
+    // 得到过滤后的图片
+    CIImage *outputImage = [filter outputImage];
+    // 转换图片, 创建基于GPU的CIContext对象
+    CIContext *context = [CIContext contextWithOptions: nil];
+    CGImageRef cgimg = [context createCGImage:outputImage fromRect:[outputImage extent]];
+    UIImage *newImg = [UIImage imageWithCGImage:cgimg];
+
+    // 释放C对象
+    CGImageRelease(cgimg);
+    
+    return newImg;
+}
+
 /**
  *  将图片放大/缩小到Size大小
  *

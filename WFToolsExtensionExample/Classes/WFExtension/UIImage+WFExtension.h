@@ -30,6 +30,18 @@
  */
 - (UIImage *)blurryImageWithRadius:(CGFloat)radius;
 
+#pragma mark ------<编辑图片>
+/**
+ *  编辑图片
+ *
+ *  @param saturation 饱和度   0---2
+ *  @param brightness 亮度    -1---1
+ *  @param contrast   对比度   0---4
+ *
+ *  @return 更改后的图片
+ */
+- (UIImage *)editImageWithSaturation:(CGFloat)saturation brightness:(CGFloat)brightness contrast:(CGFloat)contrast;
+
 #pragma mark ------<将图片放大/缩小到Size大小>
 /**
  *  将图片放大/缩小到Size大小
